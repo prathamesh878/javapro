@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body{
+    min-height: 100vh;   
+    
+}
+.side-m{
+    position: fixed;
+    background-color: green;
+    width: 35vh;
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   
+}
+.side-m .brand-name{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.side-m li{
+    font-size: 20px;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+ .side-m li:hover{
+        color: green;
+        background-color: white;
+        
+}
+.side-m li img{
+ width: 30px;
+ height: 30px;
+}
+
+.content{
+     margin-left: 16%;
+     padding-left: 10px;
+     padding-right: 10px;
+     background:rgb(217, 213, 213);
+     justify-content: space-between;
+     
+     .cards{
+       padding-left: 4px;
+       padding-right: 4px;
+       padding-top: 4px;
+       padding-bottom: 5px;
+       margin-left: 2px;
+       margin-right: 2px;
+     }
+}
+.content .content-1
+{
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.content .content-1 .activity
+{
+    min-height: 50vh;
+    flex: 5;
+    background: white;
+    margin: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+table
+{
+    padding: 10px;
+    margin-left: 10%;
+}
+th td{
+    text-align: left;
+    padding: 8px;
+}
+.content .content-2{
+    min-height: 50vh;
+    flex: 5;
+    background: white;
+    margin: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+    
+

@@ -1,0 +1,12 @@
+File -> Tools -> Network Manager -> NAT Networks (if not create new)
+
+VM1 Settings -> Network -> Adapter1 -> attached_to: NAT Network
+
+same for VM2
+
+touch tranfile.txt
+nano tranfile.txt
+    > Hey heool?
+      ctl+x , y
+
+scp tranfile.txt vagrant@10.0.2.5:/home/vagrant      

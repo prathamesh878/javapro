@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>User List</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="col-lg-8">
+                <h3 class="card-header bg-primary">User List</h3>
+                <div class="my-3" id="userList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $.get('http://localhost:9000/user', function (data) {
+                if (data.length > 0) {
+                    data.forEach(function (user) {
+                        var userDiv = $('<div class="list-group-item my-2 bg-info"></div>');
+
+                        var htmlContent = '<h4>' + user.name + '</h4>';
+                        htmlContent += '<h5>Email: ' + user.email + '</h5>';
+
+                        userDiv.html(htmlContent);
+
+                        $('#userList').append(userDiv);
+                    });
+                }
+                else {
+                    $("#userList").html('<h3>No user found</h3>'); // Adjusted message
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

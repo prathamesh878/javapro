@@ -1,0 +1,6 @@
+runtime: python312
+threadsafe: true
+
+handlers:
+- url: /
+  script: Main.py
